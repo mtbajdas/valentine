@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tap Accepted</title>
+
+<style>
+body{
+    background: linear-gradient(135deg,#ff7aa8,#ffb3c7);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    height:100vh;
+    margin:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.card{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 40px rgba(0,0,0,.25);
+    max-width:320px;
+}
+
+h1{
+    font-size:26px;
+    margin-bottom:10px;
+}
+
+p{
+    font-size:18px;
+}
+
+button{
+    margin-top:20px;
+    background:white;
+    color:#ff4f87;
+    border:none;
+    padding:12px 18px;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="start">
+<h1>Hey you</h1>
+<p>You discovered my secret message.</p>
+<button onclick="next()">Continue</button>
+</div>
+
+<script>
+function next(){
+document.getElementById("start").innerHTML =
+"<h1>I wanted to ask you properly.</h1><p>Will you be my Valentine?</p><button onclick='yes()'>Yes</button>";
+}
+
+function yes(){
+document.getElementById("start").innerHTML =
+"<h1>Good.</h1><p>It's a date then ❤️</p>";
+}
+</script>
+
+</body>
+</html>
